@@ -1,1 +1,16 @@
-/ 100
+55 / 100
+
+-5: No example of a command run with greater than 10 parameters
+-5: No example of a command run from the current directory
+
+-10: No examples of commands connected with either the || or && operators
+-5: No examples of commands with mixed connectors
+
+-5: No examples of the exit command
+-5: No examples of exit with parameters
+-5: No example of exit as a parameter to something else
+-5: No example of exit in a chain of commands
+
+-5: No example of a comment on a line by itself
+-5: When comment is directly adjacent to command, the output is incorrect.
+
