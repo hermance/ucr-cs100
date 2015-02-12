@@ -1,4 +1,47 @@
- 35   / 100  
+35 / 100
+
+-5x9: no error checking for syscalls (-5 for each syscall, see checksyscalls output)
+
+-10: file/folder parameter wasn't tested for more than one parameter
+
+-5x2: missing parameter combination -aR, -laR
+
+
+
+checksyscalls output:
+
+file: [src/ls.cpp]
+  lines with syscalls:
+  
+  040: [1;31m[K stat((const char*)[m[K
+  059:  [1;31m[K getpwuid(s.st_uid)[m[K
+  060:  [1;31m[K getgrgid(s.st_gid)[m[K
+  066:  [1;32m[Kperror()[m[K;
+  117:  [1;31m[K getcwd(directory, sizeof(directory)[m[K
+  119:  [1;32m[Kperror()[m[K;
+  122:  [1;31m[K opendir(directory)[m[K
+  123:  if(dir == NULL) [1;32m[Kperror()[m[K;
+  125:  [1;31m[K readdir(dir)[m[K
+  127:  [1;31m[K(stat(file->d_name, &file_info)[m[K
+  127:  if[1;32m[K(stat(file->d_name, &file_info)[m[K == -1)[1;32m[Kperror()[m[K;
+  139:  [1;31m[K opendir(directoryBis.c_str()[m[K
+  140:  if(dir2 == NULL)[1;32m[Kperror()[m[K;
+  142:  [1;31m[K=readdir(dir2)[m[K
+  147: [1;31m[K closedir(dir2)[m[K
+  154: [1;31m[K closedir(dir)[m[K
+  171:  [1;31m[K getcwd(directory, sizeof(directory)[m[K
+  174:  [1;32m[Kperror()[m[K;
+  180:  [1;31m[K opendir(pathR.c_str()[m[K
+  182:  [1;31m[K opendir(directory)[m[K
+  185:  [1;32m[Kperror()[m[K;
+  188:  [1;31m[K readdir(dir)[m[K
+  225: [1;31m[K closedir(dir)[m[K
+
+summary:
+  number of syscalls... 16
+  number of perror..... 7
+  grade modifier....... -45
+
 
 
 
